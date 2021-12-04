@@ -7,7 +7,7 @@ const app = express();
 const port = 3000;
 
 app.get('/', (req, res) => {
-  res.send('Hello Paul!');
+  res.send('Hello NinjaPanzer!');
 });
 // log.debug({router})
 // app.use('/', router);
