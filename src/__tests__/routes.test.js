@@ -1,26 +1,26 @@
-import { index } from "../routes/index"
+import { index } from '../routes/index';
 
 beforeEach(() => {
-  jest.clearAllMocks()
-})
+  jest.clearAllMocks();
+});
 
-describe("GET / test", () => {
+describe('GET / test', () => {
   // is this thing on
-  test("testing, testing 1", async () => {
+  test('testing, testing 1', async () => {
     expect(true).toBe(true);
   });
 
-  test("responds to /", () => {
+  test('responds to /', () => {
     const req = {};
 
     const res = {
-      text: "",
-      send: function (input) {
+      text: '',
+      send(input) {
         this.text = input;
       },
     };
     index(req, res);
 
-    expect(res.text).toEqual("Hello Project!");
+    expect(res.text).toEqual('Hello Project!');
   });
 });
